@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Киберспортивный клуб «Циолковский» в Боровске: 27 ПК, 4 PS5, RTX 3060 / 3080 / 5060, мониторы 144–240 Гц.">
+<title>Циолковский — киберспортивный клуб в Боровске</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Exo+2:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<!-- Raster assets optimized to embedded WebP for faster loading. -->
+</head>
+<body>
+<!-- ============ BOOT SEQUENCE ============ -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-in">
+    <div class="boot-row"><span>INITIALIZING ARENA</span><b>OK</b></div>
+    <div class="boot-row"><span>GPU ARRAY ....................</span><b>ONLINE</b></div>
+    <div class="boot-row"><span>NETWORK 500 Mbps ..............</span><b>ONLINE</b></div>
+    <div class="boot-row"><span>27 PC + 4 PS5 ................</span><b>READY</b></div>
+    <div class="boot-bar"><i></i></div>
+    <div class="boot-grant">ACCESS GRANTED</div>
+  </div>
+  <button class="boot-skip" id="bootSkip" type="button" onclick="this.closest('.boot').style.display='none'">SKIP ⏎</button>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top">
+      <span class="brand-txt">ЦИОЛКОВСКИЙ<span>КИБЕРСПОРТИВНЫЙ КЛУБ</span></span>
+    </a>
+    <nav class="nav">
+      <a href="#zones">Зоны</a>
+      <a href="#pricing">Цены</a>
+      <a href="#perf">Железо</a>
+      <a href="#battle">Турниры</a>
+      <a href="#location">Контакты</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="hdr-phone" href="tel:+79950556767">+7 995 055-67-67</a>
+      <a class="btn btn--sm" href="#pricing">Забронировать<span class="arw">↗</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Меню"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" data-open="false">
+  <button class="drawer-close" id="drawerClose" type="button" aria-label="Закрыть">×</button>
+  <a href="#zones">Зоны<small>01</small></a>
+  <a href="#pricing">Цены<small>02</small></a>
+  <a href="#perf">Железо<small>03</small></a>
+  <a href="#battle">Турниры<small>04</small></a>
+  <a href="#location">Контакты<small>05</small></a>
+</nav>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero hero--banner">
+  <!--
+    HERO BACKGROUND SLOT
+    Когда сгенерируем баннер, вставляем его так:
+    <section class="hero hero--banner" style="--hero-bg-image:url('hero-banner.webp')">
+    Рекомендуемый формат: 21:9 или 16:9, персонажи/экшен справа, слева 42% тёмного пространства под текст.
+  -->
+  <div class="hero-banner" data-render="hero-banner" aria-hidden="true">
+    <img class="hero-banner-image"
+         src="./assets/images/hero.webp"
+         alt="">
+  </div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <div class="wrap hero-in hero-in--banner">
+    <div class="hero-copy">
+      <p class="eyebrow">CYBERSPORT CLUB // BOROVSK</p>
+      <h1 class="h1">
+        <span class="ln"><span>ВХОДИ</span></span>
+        <span class="ln"><span class="glow">В ИГРУ</span></span>
+      </h1>
+      <p class="hero-sub">Киберспортивный клуб «Циолковский» в Боровске.<br><b>27 ПК · 4 PS5 · RTX 3060 / 3080 / 5060 · мониторы 144–240 Hz</b>.</p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#pricing">Забронировать место<span class="arw">→</span></a>
+        <a class="btn btn--ghost" href="#zones">Смотреть зоны<span class="arw">↓</span></a>
+      </div>
+
+      <div class="hero-meta">
+        <span><b>БОРОВСК</b> · пл. Ленина, д. 16 · цокольный этаж</span>
+        <span>Площадь <b>135 м²</b></span>
+        <span>Интернет <b>500 Мбит/с</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-banner-label">
+    <span>ЦИОЛКОВСКИЙ // BOROVSK</span>
+    <i></i>
+    <span>27 PC · 4 PS5 · ДО 240 HZ</span>
+  </div>
+
+  <div class="scroll-hint"><span>SCROLL</span><i></i></div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trust" aria-label="Клуб в цифрах">
+  <div class="wrap">
+    <div class="trust-in">
+      <div class="trust-cell"><div class="k">[ GPU ]</div><div class="v">RTX 3060 / 3080 / 5060</div><div class="n">GRAPHICS</div></div>
+      <div class="trust-cell"><div class="k">[ DISPLAY ]</div><div class="v">144–240 HZ</div><div class="n">24 / 27″</div></div>
+      <div class="trust-cell"><div class="k">[ NETWORK ]</div><div class="v">500 MBIT/S</div><div class="n">INTERNET</div></div>
+      <div class="trust-cell"><div class="k">[ STATIONS ]</div><div class="v"><span data-count="27">0</span> PC</div><div class="n">STANDARD · COMFORT · VIP</div></div>
+      <div class="trust-cell"><div class="k">[ CONSOLE ]</div><div class="v"><span data-count="4">0</span> PS5</div><div class="n">CONSOLE ZONE</div></div>
+      <div class="trust-cell"><div class="k">[ SPACE ]</div><div class="v"><span data-count="135">0</span> M²</div><div class="n">ПЛОЩАДЬ КЛУБА</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZONES ============ -->
+<section id="zones" class="zones-terminal">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">03 // LOADOUT SELECT</p>
+      <h2 class="sec-title">Выбери свою зону</h2>
+      <p class="sec-sub">Выбери формат под свою игру: Standard, Comfort, VIP или PlayStation 5. Ниже — актуальные цены для будней и выходных.</p>
+    </div>
+
+    <div class="zone-console rv" id="zoneConsole">
+      <div class="zone-tabs" role="tablist" aria-label="Игровые зоны">
+        <button class="zone-tab is-active" type="button" role="tab" aria-selected="true" data-zone-key="standard">
+          <span class="zone-tab-no">01</span>
+          <span class="zone-tab-copy"><strong>STANDARD</strong><small>7 PC</small></span>
+          <span class="zone-tab-price">от 130 ₽</span>
+        </button>
+
+        <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone-key="comfort">
+          <span class="zone-tab-no">02</span>
+          <span class="zone-tab-copy"><strong>COMFORT</strong><small>10 PC</small></span>
+          <span class="zone-tab-price">от 150 ₽</span>
+        </button>
+
+        <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone-key="vip">
+          <span class="zone-tab-no">03</span>
+          <span class="zone-tab-copy"><strong>VIP</strong><small>10 PC</small></span>
+          <span class="zone-tab-price">от 200 ₽</span>
+        </button>
+
+        <button class="zone-tab" type="button" role="tab" aria-selected="false" data-zone-key="ps5">
+          <span class="zone-tab-no">04</span>
+          <span class="zone-tab-copy"><strong>PS5</strong><small>4 CONSOLES</small></span>
+          <span class="zone-tab-price">от 300 ₽</span>
+        </button>
+      </div>
+
+      <div class="zone-stage">
+        <figure class="slot zone-stage-media" id="zoneStageMedia" data-render="zone-standard">
+          <img class="zone-stage-photo" data-zone-photo="standard" src="./assets/images/zone-standard.webp" alt="Зона STANDARD клуба Циолковский" decoding="async">
+          <img class="zone-stage-photo" data-zone-photo="comfort" src="./assets/images/zone-comfort.webp" alt="Зона COMFORT клуба Циолковский" decoding="async" hidden>
+          <img class="zone-stage-photo" data-zone-photo="vip" src="./assets/images/zone-vip.webp" alt="VIP-зона клуба Циолковский" decoding="async" hidden>
+          <img class="zone-stage-photo" data-zone-photo="ps5" src="./assets/images/zone-ps5.webp" alt="Консольная зона PS5 клуба Циолковский" decoding="async" hidden>
+        </figure>
+
+        <div class="zone-scan" aria-hidden="true"></div>
+        <div class="zone-cross zone-cross--a" aria-hidden="true"></div>
+        <div class="zone-cross zone-cross--b" aria-hidden="true"></div>
+
+        <div class="zone-stage-ui">
+          <div class="zone-stage-head">
+            <div>
+              <div class="zone-code" id="zoneCode">SECTOR 01 // STANDARD</div>
+              <h3 id="zoneStageTitle">STANDARD</h3>
+              <p id="zoneStageDesc">7 игровых ПК.</p>
+            </div>
+            <div class="zone-stage-price">
+              <small>ОТ</small>
+              <strong id="zoneStagePrice">130</strong>
+              <span>₽ / ЧАС</span>
+            </div>
+          </div>
+
+          <div class="zone-tariff-grid">
+            <div><span>1H · БУДНИ</span><b id="zone1wd">130 ₽</b></div>
+            <div><span>1H · ВЫХОДНЫЕ</span><b id="zone1we">150 ₽</b></div>
+            <div><span>3H · БУДНИ / ВЫХОДНЫЕ</span><b id="zone3h">360 / 420 ₽</b></div>
+            <div><span>5H · БУДНИ / ВЫХОДНЫЕ</span><b id="zone5h">550 / 650 ₽</b></div>
+          </div>
+
+          <div class="zone-stage-foot">
+            <span class="zone-places" id="zonePlaces">7 PC</span>
+            <a class="btn btn--mag" href="#pricing" id="zoneStageCta">Выбрать Standard<span class="arw">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="rail-hint">STANDARD · COMFORT · VIP · PLAYSTATION 5</p>
+  </div>
+</section>
+
+<!-- ============ PERFORMANCE ============ -->
+<section id="perf" class="perf">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow mag">04 // PERFORMANCE</p>
+      <h2 class="sec-title">Железо клуба</h2>
+      <p class="sec-sub">Современное железо, быстрые мониторы и стабильное подключение для комфортной игры.</p>
+    </div>
+
+    <div class="perf-grid rv">
+      <div class="perf-cell">
+        <div class="perf-k">GRAPHICS</div>
+        <div class="perf-v">RTX 3060 / 3080 / 5060</div>
+        <p class="perf-why">В клубе используются игровые станции с видеокартами RTX 3060, RTX 3080 и RTX 5060.</p>
+      </div>
+      <div class="perf-cell">
+        <div class="perf-k">MEMORY</div>
+        <div class="perf-v">16–32 GB</div>
+        <p class="perf-why">Объём оперативной памяти игровых станций — от 16 до 32 ГБ.</p>
+      </div>
+      <div class="perf-cell">
+        <div class="perf-k">DISPLAY</div>
+        <div class="perf-v">144–240 HZ</div>
+        <p class="perf-why">Мониторы 24″ и 27″ с частотой обновления от 144 до 240 Гц.</p>
+      </div>
+      <div class="perf-cell">
+        <div class="perf-k">NETWORK</div>
+        <div class="perf-v">500 MBIT/S</div>
+        <p class="perf-why">Интернет клуба — 500 Мбит/с.</p>
+      </div>
+    </div>
+
+    <div class="gear rv">
+      <span>LOGITECH</span><span>MSI</span><span>КРЕСЛА · ЗОНА 51</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">05 // SELECT SESSION</p>
+      <h2 class="sec-title">Тарифы</h2>
+      <p class="sec-sub">Выберите зону и длительность сессии. Стоимость зависит от дня недели.</p>
+    </div>
+
+    <div class="switchbar rv">
+      <div class="switch" role="group" aria-label="День недели">
+        <button type="button" data-day="wd" aria-pressed="true">Будни</button>
+        <button type="button" data-day="we" aria-pressed="false">Выходные</button>
+      </div>
+      <div class="switch" role="group" aria-label="Зона">
+        <button type="button" data-zone="standard" aria-pressed="true">Standard</button>
+        <button type="button" data-zone="comfort" aria-pressed="false">Comfort</button>
+        <button type="button" data-zone="vip" aria-pressed="false">VIP</button>
+        <button type="button" data-zone="ps5" aria-pressed="false">PS5</button>
+      </div>
+    </div>
+
+    <div class="plans rv">
+      <div class="plan">
+        <h3>1 час</h3>
+        <div class="amt"><span data-p="h1">130</span><small> ₽</small></div>
+        <p class="note">Стоимость зависит от выбранной зоны и дня недели.</p>
+        <a class="btn btn--ghost" href="#final">Забронировать</a>
+      </div>
+      <div class="plan">
+        <h3>3 часа</h3>
+        <div class="amt"><span data-p="h3">360</span><small> ₽</small></div>
+        <p class="note">Пакет на 3 часа по тарифу выбранной зоны.</p>
+        <a class="btn btn--ghost" href="#final">Забронировать</a>
+      </div>
+      <div class="plan best">
+        <span class="tagpill">5 HOURS</span>
+        <h3>5 часов</h3>
+        <div class="amt"><span data-p="h5">550</span><small> ₽</small></div>
+        <p class="note">Пакет на 5 часов по тарифу выбранной зоны.</p>
+        <a class="btn btn--mag" href="#final">Забронировать</a>
+      </div>
+      <div class="plan">
+        <h3>В зоне</h3>
+        <div class="amt"><span data-p="places">7</span><small> мест</small></div>
+        <p class="note">Количество игровых мест / консолей в выбранной зоне.</p>
+        <a class="btn btn--ghost" href="#zones">Смотреть зону</a>
+      </div>
+    </div>
+
+    <div class="price-more rv">
+      <details class="acc">
+        <summary>Полный прайс</summary>
+        <div class="acc-body">
+          <div class="tbl-scroll">
+            <table class="tbl">
+              <thead><tr><th>Зона</th><th>1 час, будни / выходные</th><th>3 часа, будни / выходные</th><th>5 часов, будни / выходные</th></tr></thead>
+              <tbody>
+                <tr><td>STANDARD · 7 ПК</td><td>130 / 150 ₽</td><td>360 / 420 ₽</td><td>550 / 650 ₽</td></tr>
+                <tr><td>COMFORT · 10 ПК</td><td>150 / 170 ₽</td><td>420 / 480 ₽</td><td>650 / 750 ₽</td></tr>
+                <tr><td>VIP · 10 ПК</td><td>200 / 230 ₽</td><td>570 / 660 ₽</td><td>900 / 1 050 ₽</td></tr>
+                <tr><td>PS5 · 4 консоли</td><td>300 / 350 ₽</td><td>750 / 900 ₽</td><td>1 000 / 1 250 ₽</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:16px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--text-3)">Цены указаны в формате: будни / выходные.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ CLUB SPACES — SIMPLE STATIC GALLERY ============ -->
+<section class="club-spaces" id="tour" aria-label="Зоны клуба">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">INSIDE TSIOLKOVSKY // 04</p>
+      <h2 class="sec-title">Пространство<br>клуба</h2>
+      <p class="sec-sub">Четыре реальные зоны «Циолковского» — без сложной анимации: открыл страницу и сразу всё видно.</p>
+    </div>
+
+    <div class="club-gallery rv">
+      <article class="club-card club-card--arena">
+        <div class="club-card-media">
+          <img src="./assets/images/club-main-hall.webp" alt="Основной зал киберспортивного клуба Циолковский" loading="lazy" decoding="async">
+        </div>
+        <div class="club-card-body">
+          <div class="club-card-topline"><span>01 // ARENA</span><span>110 М²</span></div>
+          <h3>Основной зал</h3>
+          <p>20 игровых ПК и 4 PlayStation 5 в основной зоне клуба.</p>
+          <div class="club-card-specs">
+            <span><b>20</b> PC</span>
+            <span><b>4</b> PS5</span>
+            <span><b>110</b> м²</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="club-card-media">
+          <img src="./assets/images/club-vip-bootcamp.webp" alt="VIP Bootcamp зона клуба Циолковский" loading="lazy" decoding="async">
+        </div>
+        <div class="club-card-body">
+          <div class="club-card-topline"><span>02 // VIP BOOTCAMP</span><span>17 М²</span></div>
+          <h3>VIP Bootcamp</h3>
+          <p>Отдельная зона для более приватной и сфокусированной игры.</p>
+          <div class="club-card-specs">
+            <span><b>7</b> PC</span>
+            <span><b>17</b> м²</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="club-card">
+        <div class="club-card-media">
+          <img src="./assets/images/club-console.webp" alt="Консольная зона клуба Циолковский" loading="lazy" decoding="async">
+        </div>
+        <div class="club-card-body">
+          <div class="club-card-topline"><span>03 // PS5</span><span>CONSOLE</span></div>
+          <h3>Консольная зона</h3>
+          <p>Четыре PlayStation 5 и мягкая зона для игры компанией.</p>
+          <div class="club-card-specs">
+            <span><b>4</b> PS5</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="club-card club-card--food">
+        <div class="club-card-media">
+          <img src="./assets/images/club-food.webp" alt="Зона питания клуба Циолковский — стойка и посадочные места" loading="lazy" decoding="async">
+        </div>
+        <div class="club-card-body">
+          <div class="club-card-topline"><span>04 // FOOD ZONE</span><span>LOUNGE</span></div>
+          <h3>Зона питания</h3>
+          <p>Уютное место для перерыва между играми: можно перекусить и отдохнуть.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAMES ============ -->
+<section id="games">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">07 // GAME LIBRARY</p>
+      <h2 class="sec-title">Твоя игра<br>уже загружена</h2>
+    </div>
+  </div>
+  <div class="marquee rv">
+    <div class="marquee-track" id="mq">
+      <span class="game">CS2</span><span class="game">DOTA 2</span><span class="game">VALORANT</span><span class="game">APEX LEGENDS</span>
+      <span class="game">FORTNITE</span><span class="game">PUBG</span><span class="game">LEAGUE OF LEGENDS</span><span class="game">WARZONE</span>
+      <span class="game">GTA V</span><span class="game">MINECRAFT</span><span class="game">RUST</span><span class="game">EA FC 26</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="games-foot rv">
+      <p class="sec-sub" style="margin:0">200+ игр и клубных аккаунтов уже установлены. Ничего скачивать не нужно — сел и играешь.</p>
+      <a class="btn btn--ghost btn--sm" href="#final">Не нашёл свою игру?<span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+<!-- ============ TOURNAMENT ============ -->
+<section id="battle">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">09 // COMMUNITY</p>
+      <h2 class="sec-title">Комьюнити клуба</h2>
+    </div>
+    <div class="battle rv">
+      <div class="battle-l">
+        <p class="eyebrow mag">СОБЕРИ СВОЮ КОМАНДУ</p>
+        <h3 class="battle-title">ТУРНИРЫ · ТРАНСЛЯЦИИ<br>И КОМАНДНЫЕ СОБЫТИЯ</h3>
+        <div class="battle-meta">
+          <span>ФОРМАТ<b>ТУРНИРЫ</b></span>
+          <span>WATCH<b>ТРАНСЛЯЦИИ</b></span>
+          <span>TEAM<b>АРЕНДА ДЛЯ КОМАНД</b></span>
+          <span class="hot">EVENTS<b>ДНИ РОЖДЕНИЯ · КОРПОРАТИВЫ</b></span>
+        </div>
+        <a class="btn" href="tel:+79950556767" aria-label="Позвонить в клуб по поводу мероприятия">Обсудить мероприятие<span class="arw">→</span></a>
+      </div>
+      <div class="battle-r">
+        <figure class="slot community-art" data-render="battle">
+          <img
+            class="community-art-image"
+            src="./assets/images/community.webp"
+            alt="Киберспортивная команда празднует победу в неоновом игровом клубе">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">10 // PLAYER FEEDBACK</p>
+      <h2 class="sec-title">Что говорят игроки</h2>
+      <p class="sec-sub">Несколько свежих отзывов гостей клуба с Яндекс Карт.</p>
+    </div>
+
+    <div class="rev-top rv">
+      <div class="reviews-source">
+        <span class="reviews-source-k">ОТЗЫВЫ</span>
+        <b>ЯНДЕКС КАРТЫ</b>
+        <span>Киберспортивный клуб «Циолковский»</span>
+      </div>
+
+      <div class="rev-actions">
+        <div class="rev-carousel-controls" aria-label="Переключение отзывов">
+          <button class="rev-arrow" id="reviewsPrev" type="button" aria-label="Предыдущий отзыв">←</button>
+          <button class="rev-arrow" id="reviewsNext" type="button" aria-label="Следующий отзыв">→</button>
+        </div>
+        <a class="btn btn--ghost btn--sm"
+           href="https://yandex.ru/maps/org/tsiolkovskiy/173685286036/reviews/?ll=36.483242%2C55.206735&z=16"
+           target="_blank"
+           rel="noopener">
+          Смотреть все отзывы<span class="arw">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="revs rv" id="reviewsCarousel">
+
+      <article class="rev">
+        <span class="tag">// ЯНДЕКС КАРТЫ · 4 СЕНТЯБРЯ</span>
+        <p>Я посетил это место 1 сентября. Цены были приемлемыми. Даже в стандартном зале я получил положительные эмоции от игры. Туалет был великолепным, а VIP-комната тоже произвела на меня приятное впечатление. Рекомендую!</p>
+        <div class="who"><span class="review-author">Кабаев Андрей</span></div>
+      </article>
+
+      <article class="rev">
+        <span class="tag">// ЯНДЕКС КАРТЫ · 12 СЕНТЯБРЯ</span>
+        <p>Очень хорошее место сходил с друзьями в пс 5 поиграть и всем понравилось сегодня попробую с друзьями пойти на вип всем рекомендую</p>
+        <div class="who"><span class="review-author">Кирилл Шуранов</span></div>
+      </article>
+
+      <article class="rev">
+        <span class="tag">// ЯНДЕКС КАРТЫ · 29 АВГУСТА</span>
+        <p>Пошёл первый раз, вчера мне очень понравилось и пошёл сегодня клуб вообще кайф, ну только можно бы добавить на компы майнкрафт</p>
+        <div class="who"><span class="review-author">Egor Gold</span></div>
+      </article>
+
+      <article class="rev">
+        <span class="tag">// ЯНДЕКС КАРТЫ · 12 СЕНТЯБРЯ</span>
+        <p>Игровой клуб имба приходи и играй кайф спокойно играйте не пожалеете</p>
+        <div class="who"><span class="review-author">Ваня Климкин</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">11 // FAQ</p>
+      <h2 class="sec-title">Частые вопросы</h2>
+    </div>
+    <div class="faq-grid rv">
+      <div>
+        <details class="acc"><summary>Нужно ли бронировать заранее?</summary><div class="acc-body">В будни днём почти всегда есть свободные места. Вечером после 18:00, в выходные и на PRO/VIP лучше забронировать — в боте это занимает полминуты.</div></details>
+        <details class="acc"><summary>Можно прийти без брони?</summary><div class="acc-body">Да. Подходите к стойке, админ подберёт свободную станцию. Актуальная загрузка зала видна в Telegram-боте в реальном времени.</div></details>
+        <details class="acc"><summary>Какие игры установлены?</summary><div class="acc-body">В описании подтверждено, что на 4 консолях PS5 установлены современные игры. Список игр на ПК нужно уточнить перед публикацией.</div></details>
+        <details class="acc"><summary>Есть клубные аккаунты?</summary><div class="acc-body">Пункт «клубные аккаунты» есть в описании клуба, но значение не заполнено. Информацию нужно уточнить перед публикацией.</div></details>
+        <details class="acc"><summary>Какая периферия используется?</summary><div class="acc-body">В описании клуба указаны бренды Logitech и MSI. Кресла — «Зона 51».</div></details>
+        <details class="acc"><summary>Можно со своей едой?</summary><div class="acc-body">Да, с едой из доставки тоже. Есть отдельная зона для перекуса — за станциями просим не есть горячее.</div></details>
+      </div>
+      <div>
+        <details class="acc"><summary>Есть ли бар?</summary><div class="acc-body">Да, в клубе есть бар.</div></details>
+        <details class="acc"><summary>Какой график работы?</summary><div class="acc-body">В исходном описании указано: Вс–Пн с 12:00 до 04:00, Пт–Сб с 12:00 до 06:00. График для вторника–четверга требует уточнения.</div></details>
+        <details class="acc"><summary>Есть парковка?</summary><div class="acc-body">Да, у клуба есть парковка.</div></details>
+        <details class="acc"><summary>Можно арендовать пространство для команды?</summary><div class="acc-body">Да, аренда для команд входит в подтверждённые направления клуба.</div></details>
+        <details class="acc"><summary>Проводятся турниры и трансляции?</summary><div class="acc-body">Да, турниры и трансляции указаны среди направлений клуба.</div></details>
+        <details class="acc"><summary>Можно провести день рождения или корпоратив?</summary><div class="acc-body">Да, клуб проводит дни рождения и корпоративы.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">12 // LOCATION</p>
+      <h2 class="sec-title">Как добраться</h2>
+    </div>
+    <div class="loc rv">
+      <div>
+        <div class="addr">г. Боровск,<br>пл. Ленина, д. 16,<br>цокольный этаж</div>
+        <ul class="loc-list">
+          <li><b>График</b><span>Вс–Пн 12:00–04:00 · Пт–Сб 12:00–06:00</span></li>
+          <li><b>Телефон</b><span><a href="tel:+79950556767" style="color:var(--cyan)">+7 995 055-67-67</a></span></li>
+          <li><b>Парковка</b><span>Есть</span></li>
+          <li><b>Бар</b><span>Есть</span></li>
+          <li><b>Вход</b><span>Цокольный этаж</span></li>
+        </ul>
+        <div class="hero-actions"><a class="btn" href="https://yandex.ru/maps/-/CTxlnM83" target="_blank" rel="noopener">Открыть Яндекс Карты<span class="arw">↗</span></a></div>
+      </div>
+      <div class="loc-map loc-map--image loc-promo">
+        <figure class="loc-promo-frame">
+          <img
+            class="loc-promo-image"
+            src="./assets/images/location-banner.webp"
+            alt="Киберпанк-баннер клуба Циолковский с девушкой, приглашающей присоединиться к игровому сообществу">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" id="final">
+  <div class="wrap final-in">
+    <p class="status-line"><i class="led"></i>СИСТЕМА // ГОТОВА</p>
+    <h2>ГОТОВ<br>ИГРАТЬ?</h2>
+    <p>27 ПК, 4 PlayStation 5 и игровое пространство в Боровске.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#pricing">Забронировать место<span class="arw">→</span></a>
+      <a class="btn btn--ghost" href="tel:+79950556767">Позвонить<span class="arw">↗</span></a>
+    </div>
+    <p class="mono final-contact"><span>БОРОВСК · ПЛ. ЛЕНИНА, 16</span><a href="tel:+79950556767">+7 995 055-67-67</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-top">
+      <a class="brand" href="#top">
+          <span class="brand-txt">ЦИОЛКОВСКИЙ<span>КИБЕРСПОРТИВНЫЙ КЛУБ</span></span>
+      </a>
+      <div class="ft-links">
+        <a href="#zones">Зоны</a><a href="#pricing">Цены</a><a href="#perf">Железо</a>
+        <a href="#battle">Турниры</a><a href="#faq">FAQ</a><a href="#location">Контакты</a>
+      </div>
+      <div class="ft-links" style="flex-direction:column;gap:8px">
+        <a href="tel:+79950556767">+7 995 055-67-67</a>
+        <a href="https://yandex.ru/maps/-/CTxlnM83" target="_blank" rel="noopener">ЯНДЕКС КАРТЫ</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>© 2026 ЦИОЛКОВСКИЙ · БОРОВСК, ПЛ. ЛЕНИНА, 16</span>
+      <span><a href="#club-rules" data-doc-modal="clubRulesModal">ПРАВИЛА КЛУБА</a> · <a href="#privacy" data-doc-modal="privacyModal">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a> · <a href="#offer" data-doc-modal="offerModal">ОФЕРТА</a> · <a href="#requisites" data-doc-modal="requisitesModal">РЕКВИЗИТЫ</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ CLUB RULES MODAL ============ -->
+<div class="doc-modal" id="clubRulesModal" hidden aria-hidden="true">
+  <div class="doc-modal__backdrop" data-doc-close></div>
+
+  <section
+    class="doc-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="clubRulesTitle"
+    aria-describedby="clubRulesIntro"
+    tabindex="-1"
+  >
+    <header class="doc-modal__head">
+      <div>
+        <div class="doc-modal__eyebrow">CLUB PROTOCOL // 01</div>
+        <h2 id="clubRulesTitle">Правила клуба</h2>
+      </div>
+      <button class="doc-modal__close" type="button" data-doc-close aria-label="Закрыть правила">×</button>
+    </header>
+
+    <div class="doc-modal__body">
+      <p class="doc-modal__lead" id="clubRulesIntro">
+        Правила нужны, чтобы всем гостям было комфортно играть, а оборудование клуба оставалось в исправном состоянии.
+        При посещении клуба гость обязуется соблюдать эти правила и требования администратора.
+      </p>
+
+      <div class="rules-grid">
+        <article class="rule-card">
+          <span class="rule-card__no">01</span>
+          <h3>Посещение клуба</h3>
+          <ul>
+            <li>Перед началом игры гость выбирает свободное или забронированное место и при необходимости обращается к администратору.</li>
+            <li>Оплаченный игровой сеанс действует в пределах выбранного тарифа и времени.</li>
+            <li>Для отдельных услуг администратор вправе попросить документ, подтверждающий возраст.</li>
+            <li>Посещение клуба несовершеннолетними в ночное время допускается только с учётом требований действующего законодательства и региональных ограничений.</li>
+          </ul>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-card__no">02</span>
+          <h3>Бронирование и время</h3>
+          <ul>
+            <li>Бронь закрепляет игровое место на согласованное время.</li>
+            <li>Если гость опаздывает, рекомендуется заранее сообщить об этом администратору по телефону клуба.</li>
+            <li>Продление сеанса возможно при наличии свободного времени на выбранном месте.</li>
+            <li>По вопросам переноса, отмены или возврата оплаты необходимо обратиться к администратору.</li>
+          </ul>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-card__no">03</span>
+          <h3>Оборудование</h3>
+          <ul>
+            <li>Перед началом игры сообщите администратору о замеченных повреждениях или неисправностях.</li>
+            <li>Запрещено самостоятельно разбирать оборудование, отключать кабели, вскрывать системные блоки и менять системные настройки, влияющие на работу клуба.</li>
+            <li>Нельзя устанавливать вредоносные программы, майнеры, средства обхода защиты или вмешиваться в работу локальной сети.</li>
+            <li>С оборудованием и периферией необходимо обращаться аккуратно и использовать их по назначению.</li>
+          </ul>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-card__no">04</span>
+          <h3>Поведение</h3>
+          <ul>
+            <li>Уважайте других игроков и сотрудников клуба.</li>
+            <li>Не допускаются оскорбления, угрозы, драки, намеренное создание конфликтов и поведение, мешающее другим гостям.</li>
+            <li>Не кричите и не включайте музыку или другой звук без наушников на громкости, мешающей окружающим.</li>
+            <li>Просим не вмешиваться в игровые сессии других гостей и не пользоваться их оборудованием без разрешения.</li>
+          </ul>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-card__no">05</span>
+          <h3>Что запрещено</h3>
+          <ul>
+            <li>Курить, использовать электронные сигареты и вейпы в помещении клуба.</li>
+            <li>Приносить или употреблять запрещённые вещества, а также находиться в состоянии, мешающем безопасному и комфортному пребыванию других гостей.</li>
+            <li>Посещать запрещённые законом ресурсы, распространять противоправные материалы или использовать клубное оборудование для незаконной деятельности.</li>
+            <li>Умышленно портить имущество клуба или других гостей.</li>
+          </ul>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-card__no">06</span>
+          <h3>Аккаунты и данные</h3>
+          <ul>
+            <li>Гость самостоятельно отвечает за сохранность логинов, паролей, игровых аккаунтов и цифровых покупок.</li>
+            <li>После завершения сеанса рекомендуется выйти из личных аккаунтов и проверить, что конфиденциальные данные не остались открытыми.</li>
+            <li>Не передавайте свои учётные данные другим посетителям и не используйте чужие аккаунты без разрешения владельца.</li>
+          </ul>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-card__no">07</span>
+          <h3>Имущество и ответственность</h3>
+          <ul>
+            <li>Гость несёт ответственность за намеренно причинённый ущерб оборудованию и имуществу клуба в порядке, предусмотренном законом.</li>
+            <li>За личными вещами необходимо следить самостоятельно; найденные вещи передаются администратору.</li>
+            <li>При любой неисправности, конфликтной ситуации или угрозе безопасности сразу обратитесь к сотруднику клуба.</li>
+          </ul>
+        </article>
+
+        <article class="rule-card">
+          <span class="rule-card__no">08</span>
+          <h3>Решения администратора</h3>
+          <ul>
+            <li>Администратор помогает с посадкой, запуском сеанса и техническими вопросами.</li>
+            <li>При нарушении правил администратор может потребовать прекратить нарушение, сменить место или завершить посещение клуба.</li>
+            <li>В спорной ситуации приоритет имеют безопасность гостей, сохранность оборудования и комфорт игровой зоны.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="rules-note">
+        <span class="rules-note__tag">ВАЖНО</span>
+        <p>
+          Эти правила являются правилами поведения и использования пространства клуба. Условия оплаты, бронирования,
+          возврата денежных средств и оказания услуг будут дополнительно закреплены в публичной оферте.
+        </p>
+      </div>
+
+      <footer class="doc-modal__foot">
+        <div>
+          <span>ЦИОЛКОВСКИЙ // БОРОВСК</span>
+          <small>пл. Ленина, 16 · +7 995 055-67-67</small>
+        </div>
+        <a class="btn btn--sm" href="tel:+79950556767">Связаться с клубом<span class="arw">↗</span></a>
+      </footer>
+    </div>
+  </section>
+</div>
+
+
+<!-- ============ REQUISITES MODAL ============ -->
+<div class="doc-modal" id="requisitesModal" hidden aria-hidden="true">
+  <div class="doc-modal__backdrop" data-doc-close></div>
+
+  <section
+    class="doc-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="requisitesTitle"
+    aria-describedby="requisitesIntro"
+    tabindex="-1"
+  >
+    <header class="doc-modal__head">
+      <div>
+        <div class="doc-modal__eyebrow">LEGAL DATA // 04</div>
+        <h2 id="requisitesTitle">Реквизиты</h2>
+      </div>
+      <button class="doc-modal__close" type="button" data-doc-close aria-label="Закрыть реквизиты">×</button>
+    </header>
+
+    <div class="doc-modal__body">
+      
+      
+      <p class="doc-modal__lead" id="requisitesIntro">
+        Банковские реквизиты ИП Цедрик Константин Геннадьевич.
+      </p>
+
+      <div class="req-grid req-grid--bank">
+        <div class="req-item req-item--wide">
+          <span>Получатель</span>
+          <strong>ИП ЦЕДРИК КОНСТАНТИН ГЕННАДЬЕВИЧ</strong>
+        </div>
+
+        <div class="req-item">
+          <span>ИНН</span>
+          <strong class="req-code">402572914528</strong>
+        </div>
+
+        <div class="req-item">
+          <span>Расчётный счёт</span>
+          <strong class="req-code">40802810581190000499</strong>
+        </div>
+
+        <div class="req-item">
+          <span>Банк</span>
+          <strong>АО «АЛЬФА-БАНК»</strong>
+        </div>
+
+        <div class="req-item">
+          <span>БИК</span>
+          <strong class="req-code">044525593</strong>
+        </div>
+
+        <div class="req-item req-item--wide">
+          <span>Корреспондентский счёт</span>
+          <strong class="req-code">30101810200000000593</strong>
+        </div>
+      </div>
+
+
+      <footer class="doc-modal__foot">
+        <div>
+          <span>ЦИОЛКОВСКИЙ // БОРОВСК</span>
+          <small>пл. Ленина, 16 · +7 995 055-67-67</small>
+        </div>
+        <a class="btn btn--sm" href="tel:+79950556767">Связаться с клубом<span class="arw">↗</span></a>
+      </footer>
+
+    </div>
+  </section>
+</div>
+
+
+<!-- ============ PRIVACY POLICY MODAL ============ -->
+<div class="doc-modal" id="privacyModal" hidden aria-hidden="true">
+  <div class="doc-modal__backdrop" data-doc-close></div>
+
+  <section
+    class="doc-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="privacyTitle"
+    aria-describedby="privacyIntro"
+    tabindex="-1"
+  >
+    <header class="doc-modal__head">
+      <div>
+        <div class="doc-modal__eyebrow">LEGAL DATA // 02</div>
+        <h2 id="privacyTitle">Политика конфиденциальности</h2>
+      </div>
+      <button class="doc-modal__close" type="button" data-doc-close aria-label="Закрыть политику конфиденциальности">×</button>
+    </header>
+
+    <div class="doc-modal__body">
+      <p class="doc-modal__lead" id="privacyIntro">
+        Настоящая Политика описывает порядок обработки персональных данных посетителей сайта
+        киберспортивного клуба «Циолковский» и лиц, которые связываются с клубом по указанным на сайте контактам.
+      </p>
+
+      <div class="privacy-stack">
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">01</span>
+          <div>
+            <h3>Оператор персональных данных</h3>
+            <p>
+              Оператором персональных данных является ИП Цедрик Константин Геннадьевич,
+              ИНН 402572914528, ОГРНИП 326400000046632.
+            </p>
+            <p>
+              Контакт клуба: <a href="tel:+79950556767">+7 995 055-67-67</a>.
+              Адрес клуба: г. Боровск, пл. Ленина, д. 16.
+            </p>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">02</span>
+          <div>
+            <h3>Какие данные могут обрабатываться</h3>
+            <ul>
+              <li>номер телефона и иные сведения, которые пользователь сообщает при звонке или ином обращении в клуб;</li>
+              <li>сведения, необходимые для бронирования места или обсуждения мероприятия, если пользователь сообщает их администратору;</li>
+              <li>техническая информация, автоматически передаваемая браузером при посещении сайта: IP-адрес, тип устройства и браузера, дата и время обращения, адрес запрошенной страницы;</li>
+              <li>иные данные, добровольно предоставленные пользователем при взаимодействии с клубом.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">03</span>
+          <div>
+            <h3>Цели обработки</h3>
+            <ul>
+              <li>обработка обращений пользователей и обратная связь;</li>
+              <li>бронирование игровых мест и согласование услуг;</li>
+              <li>организация турниров, мероприятий, дней рождения и аренды зон;</li>
+              <li>обеспечение работы, безопасности и корректного отображения сайта;</li>
+              <li>исполнение требований законодательства Российской Федерации.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">04</span>
+          <div>
+            <h3>Основания обработки</h3>
+            <p>
+              Персональные данные обрабатываются на основании согласия пользователя,
+              необходимости исполнения договорённостей с пользователем, а также в иных случаях,
+              предусмотренных законодательством Российской Федерации.
+            </p>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">05</span>
+          <div>
+            <h3>Передача третьим лицам</h3>
+            <p>
+              Персональные данные не передаются третьим лицам без законного основания,
+              за исключением случаев, когда такая передача необходима для исполнения требований закона
+              либо для работы используемых технических сервисов.
+            </p>
+            <p>
+              При переходе по внешним ссылкам пользователь покидает сайт клуба, и обработка данных
+              на стороннем ресурсе регулируется политикой соответствующего сервиса.
+            </p>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">06</span>
+          <div>
+            <h3>Технические данные и внешние ресурсы</h3>
+            <p>
+              Для отображения отдельных элементов сайт может обращаться к внешним техническим ресурсам,
+              включая сервисы загрузки веб-шрифтов. Такие сервисы могут получать технические сведения о запросе,
+              например IP-адрес и данные браузера.
+            </p>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">07</span>
+          <div>
+            <h3>Хранение и защита</h3>
+            <p>
+              Оператор принимает разумные организационные и технические меры для защиты персональных данных
+              от неправомерного доступа, изменения, раскрытия или уничтожения.
+            </p>
+            <p>
+              Данные хранятся не дольше, чем этого требуют цели обработки или законодательство,
+              после чего подлежат удалению либо обезличиванию.
+            </p>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">08</span>
+          <div>
+            <h3>Права пользователя</h3>
+            <p>
+              Пользователь вправе запросить сведения об обработке своих персональных данных,
+              потребовать их уточнения, блокирования или удаления в случаях, предусмотренных законом,
+              а также отозвать ранее предоставленное согласие на обработку.
+            </p>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">09</span>
+          <div>
+            <h3>Обращения по персональным данным</h3>
+            <p>
+              Для вопросов, связанных с обработкой персональных данных, пользователь может обратиться
+              к оператору по телефону клуба:
+              <a href="tel:+79950556767">+7 995 055-67-67</a>.
+            </p>
+          </div>
+        </article>
+
+        <article class="privacy-card">
+          <span class="privacy-card__no">10</span>
+          <div>
+            <h3>Изменение политики</h3>
+            <p>
+              Оператор вправе обновлять настоящую Политику. Актуальная редакция размещается на сайте
+              и применяется с момента её публикации, если иное не указано в новой редакции.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="rules-note privacy-note">
+        <span class="rules-note__tag">АКТУАЛЬНОСТЬ</span>
+        <p>
+          Редакция от 24.09.2026. Политика распространяется на сайт клуба «Циолковский» и обращения,
+          направленные по контактам, указанным на сайте.
+        </p>
+      </div>
+
+      <footer class="doc-modal__foot">
+        <div>
+          <span>ЦИОЛКОВСКИЙ // БОРОВСК</span>
+          <small>пл. Ленина, 16 · +7 995 055-67-67</small>
+        </div>
+        <a class="btn btn--sm" href="tel:+79950556767">Связаться с клубом<span class="arw">↗</span></a>
+      </footer>
+    </div>
+  </section>
+</div>
+
+
+<!-- ============ PUBLIC OFFER MODAL ============ -->
+<div class="doc-modal" id="offerModal" hidden aria-hidden="true">
+  <div class="doc-modal__backdrop" data-doc-close></div>
+
+  <section
+    class="doc-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="offerTitle"
+    aria-describedby="offerIntro"
+    tabindex="-1"
+  >
+    <header class="doc-modal__head">
+      <div>
+        <div class="doc-modal__eyebrow">LEGAL DATA // 03</div>
+        <h2 id="offerTitle">Публичная оферта</h2>
+      </div>
+      <button class="doc-modal__close" type="button" data-doc-close aria-label="Закрыть публичную оферту">×</button>
+    </header>
+
+    <div class="doc-modal__body">
+      <p class="doc-modal__lead" id="offerIntro">
+        Настоящий документ является публичным предложением ИП Цедрик Константин Геннадьевич
+        заключить договор оказания услуг киберспортивного клуба «Циолковский» на изложенных ниже условиях.
+      </p>
+
+      <div class="offer-meta">
+        <span>Редакция: <b>24.09.2026</b></span>
+        <span>Клуб: <b>«Циолковский»</b></span>
+        <span>Адрес: <b>г. Боровск, пл. Ленина, д. 16</b></span>
+      </div>
+
+      <div class="offer-stack">
+
+        <article class="offer-card">
+          <span class="offer-card__no">01</span>
+          <div>
+            <h3>Общие положения</h3>
+            <p>
+              Настоящая оферта определяет условия оказания услуг киберспортивного клуба «Циолковский».
+              Исполнителем является ИП Цедрик Константин Геннадьевич, ИНН 402572914528.
+              Клиентом является физическое лицо, которое принимает условия настоящей оферты.
+            </p>
+            <p>
+              Условия настоящей оферты применяются вместе с актуальными тарифами, Правилами клуба
+              и Политикой конфиденциальности, размещёнными на сайте.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">02</span>
+          <div>
+            <h3>Предмет договора</h3>
+            <p>
+              Исполнитель предоставляет Клиенту за плату право временного использования игрового места
+              и оборудования клуба в рамках выбранной зоны и тарифа, а также иные доступные услуги клуба.
+            </p>
+            <p>
+              Конкретный состав услуги, игровая зона, продолжительность сеанса и стоимость определяются
+              выбранным тарифом и фактически оформленным бронированием или оплатой.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">03</span>
+          <div>
+            <h3>Акцепт оферты</h3>
+            <p>
+              Полным и безоговорочным акцептом настоящей оферты считается оплата Клиентом выбранной услуги
+              полностью или частично, если частичная оплата предусмотрена условиями бронирования.
+            </p>
+            <p>
+              Совершая оплату, Клиент подтверждает, что ознакомился с настоящей офертой,
+              Правилами клуба и стоимостью выбранной услуги.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">04</span>
+          <div>
+            <h3>Тарифы и оплата</h3>
+            <ul>
+              <li>Стоимость услуг определяется действующими тарифами клуба на момент оформления и оплаты услуги.</li>
+              <li>На сайте цены могут указываться отдельно для будних и выходных дней.</li>
+              <li>Оплата производится способом, доступным в клубе или согласованным с администратором.</li>
+              <li>Если цена конкретной услуги заранее не указана на сайте, она сообщается Клиенту до оплаты.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">05</span>
+          <div>
+            <h3>Бронирование и начало сеанса</h3>
+            <ul>
+              <li>Бронирование может осуществляться по телефону или иным способом, который предоставляет клуб.</li>
+              <li>Клиент обязан сообщить достоверные данные, необходимые для идентификации бронирования.</li>
+              <li>Продление игрового сеанса возможно при наличии свободного времени и свободного места.</li>
+              <li>При изменении планов Клиенту рекомендуется заранее связаться с администратором клуба.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">06</span>
+          <div>
+            <h3>Отказ от услуги и возврат</h3>
+            <p>
+              Клиент вправе отказаться от исполнения договора оказания услуг в порядке,
+              предусмотренном законодательством Российской Федерации о защите прав потребителей.
+            </p>
+            <p>
+              При таком отказе возврат денежных средств производится с учётом фактически понесённых
+              Исполнителем расходов, связанных с исполнением обязательств по договору, если такие расходы имеются.
+            </p>
+            <p>
+              Для оформления возврата или переноса Клиенту необходимо обратиться к администратору клуба
+              по телефону <a href="tel:+79950556767">+7 995 055-67-67</a>.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">07</span>
+          <div>
+            <h3>Права и обязанности Клиента</h3>
+            <ul>
+              <li>Соблюдать Правила клуба и законные требования администратора.</li>
+              <li>Бережно использовать компьютеры, консоли, периферию, мебель и иное имущество клуба.</li>
+              <li>Незамедлительно сообщать сотруднику клуба о неисправностях оборудования.</li>
+              <li>Не совершать действий, нарушающих работу оборудования, сети или мешающих другим посетителям.</li>
+              <li>Самостоятельно обеспечивать сохранность своих аккаунтов, паролей и личных вещей.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">08</span>
+          <div>
+            <h3>Права и обязанности Исполнителя</h3>
+            <ul>
+              <li>Предоставить Клиенту оплаченную услугу в соответствии с выбранным тарифом и доступностью оборудования.</li>
+              <li>Поддерживать оборудование клуба в рабочем состоянии и устранять обнаруженные технические неисправности.</li>
+              <li>При необходимости заменить игровое место на сопоставимое по характеристикам, если это требуется из-за технической неисправности.</li>
+              <li>Требовать соблюдения Правил клуба и прекращения действий, нарушающих безопасность или комфорт других посетителей.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">09</span>
+          <div>
+            <h3>Технические особенности услуг</h3>
+            <p>
+              Исполнитель не гарантирует отсутствие кратковременных сбоев в работе сторонних игровых сервисов,
+              серверов разработчиков, операторов связи и иных ресурсов, не находящихся под контролем клуба.
+            </p>
+            <p>
+              При неисправности оборудования клуба Исполнитель принимает разумные меры для восстановления работы
+              либо предлагает иное доступное решение.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">10</span>
+          <div>
+            <h3>Ответственность сторон</h3>
+            <p>
+              Стороны несут ответственность в соответствии с законодательством Российской Федерации.
+              Клиент отвечает за ущерб, причинённый имуществу клуба по его вине, в порядке, установленном законом.
+            </p>
+            <p>
+              Исполнитель не отвечает за утрату игровых аккаунтов, внутриигровых предметов или данных,
+              если такая утрата произошла вследствие действий самого Клиента или третьих лиц и не связана
+              с виновными действиями Исполнителя.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">11</span>
+          <div>
+            <h3>Несовершеннолетние посетители</h3>
+            <p>
+              Посещение клуба несовершеннолетними осуществляется с учётом требований действующего законодательства,
+              в том числе региональных ограничений, применимых к нахождению несовершеннолетних в общественных местах
+              в ночное время.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">12</span>
+          <div>
+            <h3>Персональные данные</h3>
+            <p>
+              Персональные данные, полученные при обращении, бронировании и взаимодействии с клубом,
+              обрабатываются в соответствии с Политикой конфиденциальности, размещённой на сайте.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">13</span>
+          <div>
+            <h3>Форс-мажор</h3>
+            <p>
+              Стороны освобождаются от ответственности за неисполнение обязательств вследствие обстоятельств
+              непреодолимой силы в той мере, в какой такие обстоятельства объективно препятствуют исполнению договора.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">14</span>
+          <div>
+            <h3>Споры и обращения</h3>
+            <p>
+              Споры и разногласия стороны стремятся урегулировать путём переговоров.
+              Клиент вправе использовать способы защиты прав, предусмотренные законодательством Российской Федерации.
+            </p>
+            <p>
+              Обращения по услугам клуба принимаются по телефону
+              <a href="tel:+79950556767">+7 995 055-67-67</a>.
+            </p>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <span class="offer-card__no">15</span>
+          <div>
+            <h3>Изменение оферты</h3>
+            <p>
+              Исполнитель вправе изменять настоящую оферту, тарифы и перечень услуг.
+              Новая редакция применяется с момента публикации на сайте и не изменяет уже оплаченные условия услуги,
+              если иное не предусмотрено законом или отдельно не согласовано с Клиентом.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="offer-requisites">
+        <div class="offer-requisites__title">Реквизиты Исполнителя</div>
+        <div class="offer-requisites__grid">
+          <div><span>Получатель</span><b>ИП ЦЕДРИК КОНСТАНТИН ГЕННАДЬЕВИЧ</b></div>
+          <div><span>ИНН</span><b>402572914528</b></div>
+          <div><span>Расчётный счёт</span><b>40802810581190000499</b></div>
+          <div><span>Банк</span><b>АО «АЛЬФА-БАНК»</b></div>
+          <div><span>БИК</span><b>044525593</b></div>
+          <div><span>Корреспондентский счёт</span><b>30101810200000000593</b></div>
+        </div>
+      </div>
+
+      <div class="rules-note offer-note">
+        <span class="rules-note__tag">АКЦЕПТ</span>
+        <p>
+          Оплата выбранной услуги означает принятие условий настоящей публичной оферты
+          в объёме, предусмотренном законодательством Российской Федерации.
+        </p>
+      </div>
+
+      <footer class="doc-modal__foot">
+        <div>
+          <span>ЦИОЛКОВСКИЙ // БОРОВСК</span>
+          <small>пл. Ленина, 16 · +7 995 055-67-67</small>
+        </div>
+        <a class="btn btn--sm" href="tel:+79950556767">Связаться с клубом<span class="arw">↗</span></a>
+      </footer>
+    </div>
+  </section>
+</div>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="alt" href="tel:+79950556767">Позвонить</a>
+  <a href="#pricing">Забронировать →</a>
+</div>
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
